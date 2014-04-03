@@ -1,0 +1,16 @@
+{
+    "name": "gigya/api-client",
+    "description": "PSR2-compliant version of Gigya PHP SDK",
+    "authors": [
+        {
+            "name": "Guy schaller"
+        },
+        {
+            "name": "Josh Worden",
+            "email": "josh.worden@cygnus.com"
+        }
+    ],
+    "require": {
+
+    }
+}
