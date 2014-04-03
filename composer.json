@@ -1,6 +1,13 @@
 {
     "name": "gigya/api-client",
     "description": "PSR2-compliant version of Gigya PHP SDK",
+    "autoload": {
+        "psr-0":
+        {
+            "Gigya\\": ""
+        }
+    },
+    "target-dir": "Gigya",
     "authors": [
         {
             "name": "Guy schaller"
@@ -11,6 +18,8 @@
         }
     ],
     "require": {
-
+        "php": ">=5.2.0",
+        "ext-curl": "*",
+        "ext-json": "*"
     }
 }
