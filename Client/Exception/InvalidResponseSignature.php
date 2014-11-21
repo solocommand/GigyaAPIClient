@@ -2,6 +2,6 @@
 
 namespace Gigya\Client\Exception;
 
-class InvalidResponseSignaure extends InvalidResponse
+class InvalidResponseSignature extends InvalidResponse
 {
 }

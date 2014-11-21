@@ -353,7 +353,7 @@ class GSRequest
             if ($value === true) {
                 $value = "1";
             }
-            $queryString .= $amp.$key." = ".self::urlEncode($value);
+            $queryString .= $amp.$key."=".self::urlEncode($value);
             $amp = "&";
         }
 
