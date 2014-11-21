@@ -35,17 +35,19 @@ class APIClient
 
         if ($response->getErrorCode() == 0) {
 
-            $valid = SigUtils::validateUserSignature(
-                $response->getString("UID", ""),
-                $response->getString("signatureTimestamp", ""),
-                $this->secretKey,
-                $response->getString("UIDSignature", "")
-            );
+            if ('' !== $response->getString("UIDSignature", "")) {
+                $valid = SigUtils::validateUserSignature(
+                    $response->getString("UID", ""),
+                    $response->getString("signatureTimestamp", ""),
+                    $this->secretKey,
+                    $response->getString("UIDSignature", "")
+                );
 
-            if (!$valid) {
+                if (!$valid) {
 
-                throw new Exception\InvalidResponseSignature('Gigya response signature invalid.');
+                    throw new Exception\InvalidResponseSignature('Gigya response signature invalid.');
 
+                }
             }
 
             return $response;
